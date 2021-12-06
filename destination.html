@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Space tourism website</title>
+    <script src="main.js" defer></script>
+    <script src="tabs.js" defer></script>
+  </head>
+  <body>
+    <header id="destination-header">
+      <div class="mainbar">
+        <div class="menu-btn"></div>
+        <div class="logo"><img src="img/shared/logo.svg" alt="" /></div>
+        <div class="nav-line"></div>
+        <nav class="navbar">
+          <ul class="main-nav">
+            <li>
+              <a href="index.html"> <span class="numb">00</span> Home</a>
+            </li>
+            <li>
+              <a href="destination.html">
+                <span class="numb">01</span> Destination</a
+              >
+            </li>
+            <li>
+              <a href="crew.html"> <span class="numb">02</span> Crew </a>
+            </li>
+            <li>
+              <a href="technology.html">
+                <span class="numb">03</span> Technology</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="destination grid" role="main">
+        <div class="left flex">
+          <h1>
+            <span class="destination-span">01</span> Pick your destination
+          </h1>
+
+          <picture id="moon-image">
+            <source
+              srcset="img/destination/image-moon.webp"
+              type="image/webp"
+            />
+            <img src="img/destination/image-moon.webp" alt="moon image" />
+          </picture>
+          <picture hidden id="mars-image">
+            <source
+              srcset="img/destination/image-mars.webp"
+              type="image/webp"
+            />
+            <img src="img/destination/image-mars.webp" alt="mars image" />
+          </picture>
+          <picture hidden id="europa-image">
+            <source
+              srcset="img/destination/image-europa.webp"
+              type="image/webp"
+            />
+            <img src="img/destination/image-europa.webp" alt="europa image" />
+          </picture>
+          <picture hidden id="titan-image">
+            <source
+              srcset="img/destination/image-titan.webp"
+              type="image/webp"
+            />
+            <img src="img/destination/image-titan.webp" alt="titan image" />
+          </picture>
+        </div>
+        <div class="right">
+          <div class="tabs" role="tablist" aria-label="destination list">
+            <button
+              aria-selected="true"
+              role="tab"
+              aria-controls="moon-tab"
+              class="btn-tabs"
+              tabindex="0"
+              data-image="moon-image"
+            >
+              Moon
+            </button>
+            <button
+              aria-selected="false"
+              role="tab"
+              aria-controls="mars-tab"
+              class="btn-tabs"
+              tabindex="-1"
+              data-image="mars-image"
+            >
+              Mars
+            </button>
+            <button
+              aria-selected="false"
+              role="tab"
+              aria-controls="europa-tab"
+              class="btn-tabs"
+              tabindex="-1"
+              data-image="europa-image"
+            >
+              Europa
+            </button>
+            <button
+              aria-selected="false"
+              role="tab"
+              aria-controls="titan-tab"
+              class="btn-tabs"
+              tabindex="-1"
+              data-image="titan-image"
+            >
+              Titan
+            </button>
+          </div>
+          <article id="moon-tab" tabindex="0" role="tabpanel">
+            <h2>Moon</h2>
+            <p>
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+            <div class="underline"></div>
+            <div class="right-item">
+              <div>
+                <h3>Avg. distance</h3>
+                <p>384,400 km</p>
+              </div>
+              <div>
+                <h3>travel time</h3>
+                <p>3 days</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- mars -->
+          <article hidden id="mars-tab" tabindex="0" role="tabpanel">
+            <h2>Mars</h2>
+            <p>
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+            <div class="underline"></div>
+            <div class="right-item">
+              <div>
+                <h3>Avg. distance</h3>
+                <p>225 mil. km</p>
+              </div>
+              <div>
+                <h3>travel time</h3>
+                <p>9 months</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- europa -->
+          <article hidden id="europa-tab" tabindex="0" role="tabpanel">
+            <h2>Europa</h2>
+            <p>
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </p>
+            <div class="underline"></div>
+            <div class="right-item">
+              <div>
+                <h3>Avg. distance</h3>
+                <p>628 mil. km</p>
+              </div>
+              <div>
+                <h3>travel time</h3>
+                <p>3 years</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- titan -->
+          <article hidden id="titan-tab" tabindex="-1" role="tabpanel">
+            <h2>Titan</h2>
+            <p>
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </p>
+            <div class="underline"></div>
+            <div class="right-item">
+              <div>
+                <h3>Avg. distance</h3>
+                <p>1.6 bil. km</p>
+              </div>
+              <div>
+                <h3>travel time</h3>
+                <p>7 years</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+@use '../custom' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  letter-spacing: 4px;
+  color: $white;
+  font-weight: 400;
+
+  @media only screen and (max-width: 800px) {
+    letter-spacing: 2px;
+  }
+}
+
+p {
+  color: $paragraf-color;
+  font-family: 'Barlow', sans-serif;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+// crew, destination, technology typografy
+
+.small-heading {
+  font-size: 1.2rem;
+}
+.big-heading {
+  font-size: 3.2rem;
+  white-space: nowrap;
+  @media only screen and (max-width: 465px) {
+    font-size: 2rem;
+  }
+}
+
+// span
+.numb {
+  color: $white;
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+// destination span
+.destination-span {
+  color: $paragraf-color;
+  font-weight: 400;
+  margin-right: 0.5rem;
+  opacity: 0.4;
+}
+.page-heading {
+  position: absolute;
+  top: 11rem;
+  left: 9rem;
+  @media only screen and (max-width: 800px) {
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+}

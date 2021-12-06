@@ -1,0 +1,41 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#technology-header {
+  background: url(/img/technology/background-technology-desktop.jpg) no-repeat
+    center center/cover;
+  position: relative;
+}
+
+.technology {
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7rem;
+  padding: 3rem 0;
+
+  .tehnology-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tehnology-left_text {
+      justify-self: flex-start;
+    }
+
+    @media only screen and (max-width: 800px) {
+      grid-row: 2;
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+picture {
+  img {
+    width: 100%;
+  }
+}

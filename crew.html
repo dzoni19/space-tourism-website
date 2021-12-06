@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Space tourism website</title>
+    <script src="main.js" defer></script>
+    <script src="tabs.js" defer></script>
+  </head>
+  <body>
+    <header id="crew-header">
+      <div class="mainbar">
+        <div class="menu-btn"></div>
+        <div class="logo"><img src="img/shared/logo.svg" alt="" /></div>
+        <div class="nav-line"></div>
+        <nav class="navbar">
+          <ul class="main-nav">
+            <li>
+              <a href="index.html"> <span class="numb">00</span> Home</a>
+            </li>
+            <li>
+              <a href="destination.html">
+                <span class="numb">01</span> Destination</a
+              >
+            </li>
+            <li>
+              <a href="crew.html"> <span class="numb">02</span> Crew </a>
+            </li>
+            <li>
+              <a href="technology.html">
+                <span class="numb">03</span> Technology</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class="page-heading">
+        <span class="destination-span">02</span> Meet your Crew
+      </h1>
+      <div class="crew grid" role="main">
+        <div class="crew-left">
+          <div class="dots" role="tablist" aria-label="crew member list">
+            <button
+              class="dot"
+              aria-controls="commander-tab"
+              aria-selected="true"
+              role="tab"
+              tabindex="0"
+              data-image="commander-image"
+            ></button>
+            <button
+              class="dot"
+              aria-controls="mission-tab"
+              aria-selected="false"
+              role="tab"
+              tabindex="-1"
+              data-image="mission-image"
+            ></button>
+            <button
+              class="dot"
+              aria-controls="pilot-tab"
+              aria-selected="false"
+              role="tab"
+              tabindex="-1"
+              data-image="pilot-image"
+            ></button>
+            <button
+              class="dot"
+              aria-controls="crew-tab"
+              aria-selected="false"
+              role="tab"
+              tabindex="-1"
+              data-image="crew-image"
+            ></button>
+          </div>
+          <!-- Commander -->
+          <article
+            class="crew-left_text"
+            tabindex="0"
+            role="tabpanel"
+            id="commander-tab"
+          >
+            <h2 class="small-heading">Commander</h2>
+            <h3 class="big-heading">DOUGLAS HURLEY</h3>
+            <p>
+              Douglas Gerald Hurley is an American engineer, former Marine Corps
+              pilot and former NASA astronaut. He launched into space for the
+              third time as commander of Crew Dragon Demo-2.
+            </p>
+          </article>
+
+          <!-- Mark -->
+          <article
+            hidden
+            id="mission-tab"
+            class="crew-left_text"
+            tabindex="0"
+            role="tabpanel"
+          >
+            <h2 class="small-heading">Mission Specialist</h2>
+            <h3 class="big-heading">Mark Shuttleworth</h3>
+            <p>
+              Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+              company behind the Linux-based Ubuntu operating system.
+              Shuttleworth became the first South African to travel to space as
+              a space tourist.
+            </p>
+          </article>
+
+          <!-- Pilot -->
+          <article
+            hidden
+            class="crew-left_text"
+            id="pilot-tab"
+            tabindex="0"
+            role="tabpanel"
+          >
+            <h2 class="small-heading">Pilot</h2>
+            <h3 class="big-heading">Victor Glover</h3>
+            <p>
+              Pilot on the first operational flight of the SpaceX Crew Dragon to
+              the International Space Station. Glover is a commander in the U.S.
+              Navy where he pilots an F/A-18.He was a crew member of Expedition
+              64, and served as a station systems flight engineer.
+            </p>
+          </article>
+
+          <!-- Flight Engineer -->
+          <article
+            hidden
+            class="crew-left_text"
+            id="crew-tab"
+            tabindex="0"
+            role="tabpanel"
+          >
+            <h2 class="small-heading">Flight Engineer</h2>
+            <h3 class="big-heading">Anousheh Ansari</h3>
+            <p>
+              Anousheh Ansari is an Iranian American engineer and co-founder of
+              Prodea Systems. Ansari was the fourth self-funded space tourist,
+              the first self-funded woman to fly to the ISS, and the first
+              Iranian in space.
+            </p>
+          </article>
+        </div>
+
+        <!-- pictures -->
+        <picture id="commander-image">
+          <source
+            srcset="img/crew/image-douglas-hurley.png"
+            type="image/webp"
+          />
+          <img
+            src="img/crew/image-douglas-hurley.png"
+            alt="commander Douglas"
+          />
+        </picture>
+
+        <!-- mission img -->
+        <picture hidden id="mission-image">
+          <source
+            srcset="img/crew/image-mark-shuttleworth.png"
+            type="image/webp"
+          />
+          <img src="img/crew/image-mark-shuttleworth.png" alt="pilot image" />
+        </picture>
+
+        <!-- pilot img -->
+        <picture hidden id="pilot-image">
+          <source srcset="img/crew/image-victor-glover.png" type="image/webp" />
+          <img src="img/crew/image-victor-glover.png" alt="pilot image" />
+        </picture>
+
+        <!-- crew-img -->
+        <picture hidden id="crew-image">
+          <source
+            srcset="img/crew/image-anousheh-ansari.png"
+            type="image/webp"
+          />
+          <img src="img/crew/image-anousheh-ansari.png" alt="crew image" />
+        </picture>
+      </div>
+    </header>
+  </body>
+</html>

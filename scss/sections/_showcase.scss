@@ -1,0 +1,52 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.showcase {
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 4rem;
+  left: 10rem;
+
+  .showcase-text {
+    width: 28.1rem;
+    height: 23.9;
+
+    @media only screen and (max-width: 800px) {
+      padding: 4rem 3rem;
+      max-width: 60rem;
+      margin: auto;
+    }
+    @media only screen and (max-width: 465px) {
+      padding: 1rem 2rem;
+      width: 100%;
+    }
+
+    & h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    & h1 {
+      font-size: 9rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+
+      @media only screen and (max-width: 465px) {
+        font-size: 6rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    @include positionCentar;
+    top: 7rem;
+    left: 0;
+    right: 0;
+  }
+  @media only screen and (man-width: 1024px) {
+    top: 14rem;
+    left: 3rem;
+    right: 0;
+  }
+}

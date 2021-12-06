@@ -1,0 +1,48 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#crew-header {
+  background: url(/img/crew/background-crew-desktop.jpg) no-repeat center
+    center/cover;
+  position: relative;
+}
+
+.crew {
+  margin-top: 9rem;
+  grid-template-columns: 60% 40%;
+  gap: 3rem;
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    @include positionCentar;
+    padding-top: 6rem;
+  }
+  & img {
+    max-width: 50%;
+
+    @media only screen and (max-width: 465px) {
+      grid-row: 1;
+      @include centarAllSelf;
+    }
+    @media only screen and (max-width: 800px) {
+      @include centarAllSelf;
+      margin: 0 auto;
+    }
+  }
+}
+.crew-left {
+  display: flex;
+  @include centarAllSelf;
+  flex-direction: column-reverse;
+  justify-self: flex-start;
+  padding: 2rem 10rem;
+
+  @media only screen and (max-width: 465px) {
+    flex-direction: column;
+    @include centarAllSelf;
+    grid-row: 2;
+    padding: 1rem;
+  }
+  @media only screen and (max-width: 800px) {
+    justify-self: center;
+  }
+}
