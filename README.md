@@ -17,7 +17,7 @@ Users should be able to:
 
 <img width="679" alt="2021-12-06 19_27_08-" src="https://user-images.githubusercontent.com/63516391/144901953-df81649e-4df4-4000-963a-86c242b777a3.png">
 
-<a href="https://spacetourism-website.netlify.app/technology.html">Click to See</a>
+<a href="https://spacetourism-website.netlify.app/">Click to See</a>
 
 
 ## My process
